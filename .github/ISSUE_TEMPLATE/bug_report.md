@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a problem in TinyPilot
+about: Report a problem in BasslineMnk
 title: ''
 labels: 'bug'
 assignees: ''
@@ -21,7 +21,7 @@ Briefly summarize the problem you're experiencing.
 
 ## What are the steps to reproduce this behavior?
 
-1. Open TinyPilot in Chrome
+1. Open BasslineMnk in Chrome
 2. Click on '....'
 4. See error
 
@@ -31,4 +31,4 @@ Briefly summarize the problem you're experiencing.
 
 ## Logs
 
-Please paste the URL you see when you run `/opt/tinypilot/dev-scripts/dump-logs`
+Please paste the URL you see when you run `/opt/basslinemnk/dev-scripts/dump-logs`

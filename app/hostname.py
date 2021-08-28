@@ -43,7 +43,7 @@ def change(new_hostname):
     """
     try:
         return subprocess.check_output(
-            ['sudo', '/opt/tinypilot-privileged/change-hostname', new_hostname],
+            ['sudo', '/opt/basslinemnk-privileged/change-hostname', new_hostname],
             stderr=subprocess.STDOUT,
             universal_newlines=True)
     except subprocess.CalledProcessError as e:

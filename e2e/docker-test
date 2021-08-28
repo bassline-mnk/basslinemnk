@@ -9,8 +9,8 @@ set -u
 # Exit on first error.
 set -e
 
-IMAGE_NAME="tinypilot-e2e-image"
-CONTAINER_NAME="tinypilot-e2e"
+IMAGE_NAME="basslinemnk-e2e-image"
+CONTAINER_NAME="basslinemnk-e2e"
 
 docker version
 

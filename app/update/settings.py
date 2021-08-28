@@ -1,14 +1,14 @@
-"""Manages a TinyPilot update settings file.
+"""Manages a BasslineMnk update settings file.
 
-TinyPilot currently manages most settings through Ansible. When TinyPilot
+BasslineMnk currently manages most settings through Ansible. When BasslineMnk
 launches ansible, it passes an extra YAML file that controls properties of the
 install and configuration. This module is a wrapper around the YAML file that
-allows TinyPilot code to modify it cleanly.
+allows BasslineMnk code to modify it cleanly.
 
 Typical usage example:
 
     settings = update_settings.load()
-    settings.tinypilot_repo_branch = '2.1.5'
+    settings.basslinemnk_repo_branch = '2.1.5'
     update_settings.save(settings)
 """
 
@@ -41,22 +41,22 @@ class Settings:
     def as_dict(self):
         return self._data
 
-    # Note: tinypilot_repo_branch is confusingly named. It should really be
-    # tinypilot_repo_version, but this class just reflects the names in the
-    # TinyPilot Ansible role.
+    # Note: basslinemnk_repo_branch is confusingly named. It should really be
+    # basslinemnk_repo_version, but this class just reflects the names in the
+    # BasslineMnk Ansible role.
     @property
-    def tinypilot_repo_branch(self):
-        return self._data['tinypilot_repo_branch']
+    def basslinemnk_repo_branch(self):
+        return self._data['basslinemnk_repo_branch']
 
-    @tinypilot_repo_branch.setter
-    def tinypilot_repo_branch(self, value):
-        """Sets the value of tinypilot_repo_branch in update settings.
+    @basslinemnk_repo_branch.setter
+    def basslinemnk_repo_branch(self, value):
+        """Sets the value of basslinemnk_repo_branch in update settings.
 
         Args:
             value: A string value of a branch or tag name like '2.1.0' or
                 'virtual-storage'.
         """
-        self._data['tinypilot_repo_branch'] = value
+        self._data['basslinemnk_repo_branch'] = value
 
     @property
     def ustreamer_desired_fps(self):
@@ -86,7 +86,7 @@ class Settings:
 
 
 def load():
-    """Retrieves the current TinyPilot update settings
+    """Retrieves the current BasslineMnk update settings
 
     Parses the contents of settings file and generates a settings object that
     represents the values in the settings file.

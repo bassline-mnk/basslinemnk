@@ -28,9 +28,9 @@
   </style>
 
   <div id="prompt">
-    <h3>Shut Down TinyPilot Device?</h3>
+    <h3>Shut Down BasslineMnk Device?</h3>
     <p>
-      Note that this will shut down <strong>TinyPilot</strong>, not the machine
+      Note that this will shut down <strong>BasslineMnk</strong>, not the machine
       to which it is attached.
     </p>
     <button id="confirm-shutdown" class="btn-danger" type="button">
@@ -43,12 +43,12 @@
   </div>
 
   <div id="restarting">
-    <h3>Restarting TinyPilot Device</h3>
+    <h3>Restarting BasslineMnk Device</h3>
     <progress-spinner></progress-spinner>
   </div>
 
   <div id="shutting-down">
-    <h3>Shutting Down TinyPilot Device</h3>
+    <h3>Shutting Down BasslineMnk Device</h3>
     <progress-spinner></progress-spinner>
   </div>
 
@@ -121,14 +121,14 @@
               if (restart) {
                 this.dispatchEvent(
                   new DialogFailedEvent({
-                    title: "Failed to Restart TinyPilot Device",
+                    title: "Failed to Restart BasslineMnk Device",
                     details: error,
                   })
                 );
               } else {
                 this.dispatchEvent(
                   new DialogFailedEvent({
-                    title: "Failed to Shut Down TinyPilot Device",
+                    title: "Failed to Shut Down BasslineMnk Device",
                     details: error,
                   })
                 );

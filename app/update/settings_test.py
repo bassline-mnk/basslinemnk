@@ -46,40 +46,40 @@ class UpdateSettingsTest(unittest.TestCase):
         self.make_mock_settings_file('')
 
         settings = update.settings.load()
-        settings.tinypilot_repo_branch = 'dummy-branch-name'
+        settings.basslinemnk_repo_branch = 'dummy-branch-name'
         update.settings.save(settings)
 
         self.assertMultiLineEqual(
             """
-tinypilot_repo_branch: dummy-branch-name
+basslinemnk_repo_branch: dummy-branch-name
 """.lstrip(), self.read_mock_settings_file())
 
     def test_overwrites_existing_branch_name(self):
         self.make_mock_settings_file("""
-tinypilot_repo_branch: branch-name-to-overwrite
+basslinemnk_repo_branch: branch-name-to-overwrite
 """.lstrip())
 
         settings = update.settings.load()
-        settings.tinypilot_repo_branch = 'dummy-branch-name'
+        settings.basslinemnk_repo_branch = 'dummy-branch-name'
         update.settings.save(settings)
 
         self.assertMultiLineEqual(
             """
-tinypilot_repo_branch: dummy-branch-name
+basslinemnk_repo_branch: dummy-branch-name
 """.lstrip(), self.read_mock_settings_file())
 
     def test_leaves_unrecognized_settings_intact(self):
         self.make_mock_settings_file("""
-tinypilot_repo_branch: branch-name-to-overwrite
+basslinemnk_repo_branch: branch-name-to-overwrite
 unrecognized_setting: dummyvalue
 """.lstrip())
 
         settings = update.settings.load()
-        settings.tinypilot_repo_branch = 'dummy-branch-name'
+        settings.basslinemnk_repo_branch = 'dummy-branch-name'
         update.settings.save(settings)
 
         self.assertMultiLineEqual(
             """
-tinypilot_repo_branch: dummy-branch-name
+basslinemnk_repo_branch: dummy-branch-name
 unrecognized_setting: dummyvalue
 """.lstrip(), self.read_mock_settings_file())

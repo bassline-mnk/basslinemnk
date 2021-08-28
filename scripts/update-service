@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Standalone executable for running the TinyPilot updater and saving the result
+# Standalone executable for running the BasslineMnk updater and saving the result
 # to a file. This executable is meant to be run as a systemd one-shot service,
 # launched manually when the user requests an update.
 
@@ -63,12 +63,12 @@ def make_update_result(update_error):
 
 def main(_):
     configure_logging()
-    logger.info('Starting TinyPilot update')
+    logger.info('Starting BasslineMnk update')
     perform_update()
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        prog='TinyPilot Update Service',
+        prog='BasslineMnk Update Service',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     main(parser.parse_args())

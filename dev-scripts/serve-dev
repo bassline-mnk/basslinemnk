@@ -9,7 +9,7 @@ set -x
 # Exit on unset variable.
 set -u
 
-# Serve TinyPilot in dev mode.
+# Serve BasslineMnk in dev mode.
 HOST=0.0.0.0 \
   PORT=8000 \
   DEBUG=1 \

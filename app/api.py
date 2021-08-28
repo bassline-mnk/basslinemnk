@@ -19,7 +19,7 @@ api_blueprint = flask.Blueprint('api', __name__, url_prefix='/api')
 
 @api_blueprint.route('/debugLogs', methods=['GET'])
 def debug_logs_get():
-    """Returns the TinyPilot debug log as a plaintext HTTP response.
+    """Returns the BasslineMnk debug log as a plaintext HTTP response.
 
     Returns:
         A text/plain response with the content of the logs in the response body.
@@ -50,9 +50,9 @@ def restart_post():
     """Triggers restart of the system.
 
     For backwards compatibility, we must include the now deprecated `success`
-    and `error` properties in the response. This is needed for when TinyPilot
+    and `error` properties in the response. This is needed for when BasslineMnk
     updates from a version before our migration to using conventional HTTP
-    status codes. Issue: https://github.com/tiny-pilot/tinypilot/issues/506
+    status codes. Issue: https://github.com/bassline-mnk/basslinemnk/issues/506
 
     Returns:
         No additional properties on success.
@@ -74,9 +74,9 @@ def update_get():
     """Fetches the state of the latest update job.
 
     For backwards compatibility, we must include the now deprecated `success`
-    and `error` properties in the response. This is needed for when TinyPilot
+    and `error` properties in the response. This is needed for when BasslineMnk
     updates from a version before our migration to using conventional HTTP
-    status codes. Issue: https://github.com/tiny-pilot/tinypilot/issues/506
+    status codes. Issue: https://github.com/bassline-mnk/basslinemnk/issues/506
 
     Returns:
         On success, a JSON data structure with the following properties:
@@ -107,9 +107,9 @@ def update_get():
 
 @api_blueprint.route('/update', methods=['PUT'])
 def update_put():
-    """Initiates job to update TinyPilot to the latest version available.
+    """Initiates job to update BasslineMnk to the latest version available.
 
-    This endpoint asynchronously starts a job to update TinyPilot to the latest
+    This endpoint asynchronously starts a job to update BasslineMnk to the latest
     version.  API clients can then query the status of the job with GET
     /api/update to see the status of the update.
 
@@ -128,7 +128,7 @@ def update_put():
 
 @api_blueprint.route('/version', methods=['GET'])
 def version_get():
-    """Retrieves the current installed version of TinyPilot.
+    """Retrieves the current installed version of BasslineMnk.
 
     Returns:
         On success, a JSON data structure with the following properties:
@@ -149,7 +149,7 @@ def version_get():
 
 @api_blueprint.route('/latestRelease', methods=['GET'])
 def latest_release_get():
-    """Retrieves the latest version of TinyPilot.
+    """Retrieves the latest version of BasslineMnk.
 
     Returns:
         On success, a JSON data structure with the following properties:
@@ -178,7 +178,7 @@ def hostname_get():
 
         Example:
         {
-            "hostname": "tinypilot"
+            "hostname": "basslinemnk"
         }
 
         Returns an error object on failure.
@@ -214,15 +214,15 @@ def hostname_set():
 
 @api_blueprint.route('/status', methods=['GET'])
 def status_get():
-    """Checks the status of TinyPilot.
+    """Checks the status of BasslineMnk.
 
     This endpoint may be called from all locations, so there is no restriction
     in regards to CORS.
 
     For backwards compatibility, we must include the now deprecated `success`
-    and `error` properties in the response. This is needed for when TinyPilot
+    and `error` properties in the response. This is needed for when BasslineMnk
     updates from a version before our migration to using conventional HTTP
-    status codes. Issue: https://github.com/tiny-pilot/tinypilot/issues/506
+    status codes. Issue: https://github.com/bassline-mnk/basslinemnk/issues/506
 
     Returns:
         No additional properties implies the server is up and running.

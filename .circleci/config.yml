@@ -54,7 +54,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run TinyPilot e2e tests
+          name: Run BasslineMnk e2e tests
           command: ./e2e/docker-test
 workflows:
   test:

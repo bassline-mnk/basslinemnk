@@ -1,5 +1,5 @@
 /**
- * Streams the TinyPilot update logs via a SocketIO connection.
+ * Streams the BasslineMnk update logs via a SocketIO connection.
  * @requires socketio
  */
 export class UpdateLogsStreamer {

@@ -15,13 +15,13 @@ class AlreadyInProgressError(Error):
     pass
 
 
-UPDATE_SCRIPT_PATH = '/opt/tinypilot-privileged/update'
+UPDATE_SCRIPT_PATH = '/opt/basslinemnk-privileged/update'
 
 
 def start_async():
     """Launches the update service asynchronously.
 
-    Launches the tinypilot-update systemd service in the background. If the
+    Launches the basslinemnk-update systemd service in the background. If the
     service is already running, raises an exception.
 
     Raises:
@@ -34,4 +34,4 @@ def start_async():
     update.result_store.clear()
 
     subprocess.Popen(
-        ('sudo', '/usr/sbin/service', 'tinypilot-updater', 'start'))
+        ('sudo', '/usr/sbin/service', 'basslinemnk-updater', 'start'))

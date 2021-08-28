@@ -1,29 +1,29 @@
-# TinyPilot's Architecture
+# BasslineMnk's Architecture
 
 ## Overview
 
-![TinyPilot Architecture](https://docs.google.com/drawings/d/e/2PACX-1vR48PdVelUodnzk7az1FE4pNX4WK3l3YRas8Ty8fnE-2qE-DN5AYXsHD26F4OJgmGSZkmGGJgs0RvpT/pub?w=903&amp;h=792)
+![BasslineMnk Architecture](https://docs.google.com/drawings/d/e/2PACX-1vR48PdVelUodnzk7az1FE4pNX4WK3l3YRas8Ty8fnE-2qE-DN5AYXsHD26F4OJgmGSZkmGGJgs0RvpT/pub?w=903&amp;h=792)
 
-## TinyPilot frontend
+## BasslineMnk frontend
 
-The TinyPilot frontend runs in the user's browser. It is responsible for:
+The BasslineMnk frontend runs in the user's browser. It is responsible for:
 
 * Presenting the target computer's video stream in the browser window
-* Forwarding keyboard and mouse input to the [TinyPilot backend](#tinypilot-backend)
-* Offering friendly interfaces for the user to change TinyPilot's settings
+* Forwarding keyboard and mouse input to the [BasslineMnk backend](#basslinemnk-backend)
+* Offering friendly interfaces for the user to change BasslineMnk's settings
 
-The TinyPilot frontend is a pure HTML/CSS/JS app. It has no build or compilation step and no framework like Vue, Angular, or React. It uses external libraries as little as possible.
+The BasslineMnk frontend is a pure HTML/CSS/JS app. It has no build or compilation step and no framework like Vue, Angular, or React. It uses external libraries as little as possible.
 
-The frontend makes heavy use of [HTML Custom Elements](https://css-tricks.com/creating-a-custom-element-from-scratch/). Modern browsers support these natively. TinyPilot's custom elements try to mirror the style of Vue's [Single File Components](https://vuejs.org/v2/guide/single-file-components.html).
+The frontend makes heavy use of [HTML Custom Elements](https://css-tricks.com/creating-a-custom-element-from-scratch/). Modern browsers support these natively. BasslineMnk's custom elements try to mirror the style of Vue's [Single File Components](https://vuejs.org/v2/guide/single-file-components.html).
 
-TinyPilot's custom elements can be found in [app/templates/custom-elements](./app/templates/custom-elements).
+BasslineMnk's custom elements can be found in [app/templates/custom-elements](./app/templates/custom-elements).
 
-## TinyPilot backend
+## BasslineMnk backend
 
 The backend is a Flask application. It offers handles three types of requests:
 
 * Page requests
-  * To serve a page like the main `/` view, TinyPilot uses Flask to pre-render a template.
+  * To serve a page like the main `/` view, BasslineMnk uses Flask to pre-render a template.
 * REST requests
   * When the frontend makes a request to the backend to query server state or perform some action (e.g., `/api/shutdown`), the backend handles it through REST handlers.
 * WebSockets requests
@@ -33,17 +33,17 @@ The backend is responsible for sending keyboard and mouse input to the target co
 
 ## USB gadgets
 
-TinyPilot impersonates keyboard and mouse input using the Linux [USB Gadget API](https://www.kernel.org/doc/html/v4.13/driver-api/usb/gadget.html).
+BasslineMnk impersonates keyboard and mouse input using the Linux [USB Gadget API](https://www.kernel.org/doc/html/v4.13/driver-api/usb/gadget.html).
 
-To use the USB Gadget API, a device needs a USB port that operates in either device mode or supports USB OTG (which allows the port to switch between host mode and device mode). The Raspberry Pi 4B's USB-C port is the only port on the device capable of USB OTG, so this is the port that TinyPilot uses.
+To use the USB Gadget API, a device needs a USB port that operates in either device mode or supports USB OTG (which allows the port to switch between host mode and device mode). The Raspberry Pi 4B's USB-C port is the only port on the device capable of USB OTG, so this is the port that BasslineMnk uses.
 
-TinyPilot [presents itself](https://github.com/tiny-pilot/ansible-role-tinypilot/blob/594be69c86fcdeaa9488690b2aef951acaf3bf64/files/init-usb-gadget) to the target computer as a USB Multifunction Composite Gadget (i.e., a USB hub) with a USB keyboard and mouse attached. This allows TinyPilot to send both keyboard and mouse input through a single USB connection.
+BasslineMnk [presents itself](https://github.com/bassline-mnk/ansible-role-basslinemnk/blob/594be69c86fcdeaa9488690b2aef951acaf3bf64/files/init-usb-gadget) to the target computer as a USB Multifunction Composite Gadget (i.e., a USB hub) with a USB keyboard and mouse attached. This allows BasslineMnk to send both keyboard and mouse input through a single USB connection.
 
 ## nginx
 
 [nginx](https://nginx.org/) is a popular open-source web server and reverse proxy.
 
-TinyPilot uses nginx to listen to incoming HTTP requests and proxy them to the correct internal component. It also serves all of TinyPilot's static resources (i.e., files that don't need to go through Flask for server-side processing).
+BasslineMnk uses nginx to listen to incoming HTTP requests and proxy them to the correct internal component. It also serves all of BasslineMnk's static resources (i.e., files that don't need to go through Flask for server-side processing).
 
 ## uStreamer
 
@@ -64,6 +64,6 @@ As of Feb. 2021, uStreamer's maintainer is working on a H264 option, expected to
 
 ## Installation
 
-TinyPilot's installation process is somewhat unusual in that it depends on Ansible. The [`quick-install`](./quick-install) script bootstraps an Ansible environment on a Raspberry Pi and then uses [`ansible-role-tinypilot`](https://github.com/tiny-pilot/ansible-role-tinypilot) to install itself locally. `ansible-role-tinypilot` transitively includes other roles that TinyPilot depends on such as [`ansible-role-ustreamer`](https://github.com/mtlynch/ansible-role-ustreamer) and [`ansible-role-nginx`](https://github.com/geerlingguy/ansible-role-nginx).
+BasslineMnk's installation process is somewhat unusual in that it depends on Ansible. The [`quick-install`](./quick-install) script bootstraps an Ansible environment on a Raspberry Pi and then uses [`ansible-role-basslinemnk`](https://github.com/bassline-mnk/ansible-role-basslinemnk) to install itself locally. `ansible-role-basslinemnk` transitively includes other roles that BasslineMnk depends on such as [`ansible-role-ustreamer`](https://github.com/adrian-griffin/ansible-role-ustreamer) and [`ansible-role-nginx`](https://github.com/geerlingguy/ansible-role-nginx).
 
 The `quick-install` script is also responsible for version-to-version updates and configuration changes.

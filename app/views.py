@@ -5,8 +5,8 @@ from find_files import find as find_files
 
 views_blueprint = flask.Blueprint('views', __name__, url_prefix='')
 
-# Default hostname of TinyPilot device.
-_DEFAULT_HOSTNAME = 'tinypilot'
+# Default hostname of BasslineMnk device.
+_DEFAULT_HOSTNAME = 'basslinemnk'
 
 
 @views_blueprint.route('/', methods=['GET'])
@@ -30,7 +30,7 @@ def styleguide_get():
 
 # On a real install, nginx redirects the /stream route to uStreamer, so a real
 # user should never hit this route in production. In development, show a fake
-# still image to give a better sense of how the TinyPilot UI looks.
+# still image to give a better sense of how the BasslineMnk UI looks.
 @views_blueprint.route('/stream', methods=['GET'])
 def stream_get():
     if flask.current_app.debug:

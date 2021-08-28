@@ -22,7 +22,7 @@ class LauncherTest(unittest.TestCase):
 
         mock_clear.assert_called()
         mock_popen.assert_called_once_with(
-            ('sudo', '/usr/sbin/service', 'tinypilot-updater', 'start'))
+            ('sudo', '/usr/sbin/service', 'basslinemnk-updater', 'start'))
 
     @mock.patch.object(launcher.subprocess, 'Popen')
     @mock.patch.object(launcher.update.result_store, 'clear')
@@ -35,7 +35,7 @@ class LauncherTest(unittest.TestCase):
 
         mock_clear.assert_called()
         mock_popen.assert_called_once_with(
-            ('sudo', '/usr/sbin/service', 'tinypilot-updater', 'start'))
+            ('sudo', '/usr/sbin/service', 'basslinemnk-updater', 'start'))
 
     @mock.patch.object(launcher.subprocess, 'Popen')
     @mock.patch.object(launcher.update.result_store, 'clear')
@@ -49,7 +49,7 @@ class LauncherTest(unittest.TestCase):
 
         mock_clear.assert_called_once()
         mock_popen.assert_called_once_with(
-            ('sudo', '/usr/sbin/service', 'tinypilot-updater', 'start'))
+            ('sudo', '/usr/sbin/service', 'basslinemnk-updater', 'start'))
 
     @mock.patch.object(launcher.subprocess, 'Popen')
     @mock.patch.object(launcher.update.result_store, 'clear')

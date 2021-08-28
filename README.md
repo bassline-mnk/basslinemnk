@@ -1,18 +1,18 @@
-# TinyPilot
+# BasslineMnk
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/tiny-pilot/tinypilot)](https://github.com/tiny-pilot/tinypilot/graphs/contributors)
-[![CircleCI](https://circleci.com/gh/tiny-pilot/tinypilot.svg?style=svg)](https://circleci.com/gh/tiny-pilot/tinypilot)
-[![Reddit](https://img.shields.io/badge/reddit-join-orange?logo=reddit)](https://www.reddit.com/r/tinypilot)
-[![Twitter](https://img.shields.io/twitter/follow/tinypilotkvm?label=Twitter&style=social)](https://twitter.com/tinypilotkvm)
+[![Contributors](https://img.shields.io/github/contributors/bassline-mnk/basslinemnk)](https://github.com/bassline-mnk/basslinemnk/graphs/contributors)
+[![CircleCI](https://circleci.com/gh/bassline-mnk/basslinemnk.svg?style=svg)](https://circleci.com/gh/bassline-mnk/basslinemnk)
+[![Reddit](https://img.shields.io/badge/reddit-join-orange?logo=reddit)](https://www.reddit.com/r/basslinemnk)
+[![Twitter](https://img.shields.io/twitter/follow/basslinemnkkvm?label=Twitter&style=social)](https://twitter.com/basslinemnkkvm)
 
 ## Overview
 
 Turn your Raspberry Pi into a browser-based KVM.
 
-[![TinyPilot demo](https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/readme-assets/demo-800w.gif)](https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/readme-assets/demo.gif)
+[![BasslineMnk demo](https://raw.githubusercontent.com/bassline-mnk/basslinemnk/master/readme-assets/demo-800w.gif)](https://raw.githubusercontent.com/bassline-mnk/basslinemnk/master/readme-assets/demo.gif)
 
-<https://tinypilotkvm.com>
+<https://basslinemnkkvm.com>
 
 ## Features
 
@@ -24,23 +24,23 @@ Turn your Raspberry Pi into a browser-based KVM.
 
 ## Official builds
 
-TinyPilot official hardware packages give you everything you need to run TinyPilot and allows you to fund TinyPilot's development for future improvements.
+BasslineMnk official hardware packages give you everything you need to run BasslineMnk and allows you to fund BasslineMnk's development for future improvements.
 
-### [TinyPilot Voyager](https://tinypilotkvm.com/product/tinypilot-voyager)
+### [BasslineMnk Voyager](https://basslinemnkkvm.com/product/basslinemnk-voyager)
 
-[![Photo of TinyPilot Voyager](https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/readme-assets/voyager-side-cables.jpg)](https://tinypilotkvm.com/product/tinypilot-voyager)
+[![Photo of BasslineMnk Voyager](https://raw.githubusercontent.com/bassline-mnk/basslinemnk/master/readme-assets/voyager-side-cables.jpg)](https://basslinemnkkvm.com/product/basslinemnk-voyager)
 
-Voyager is TinyPilot's professional-grade KVM over IP device. Its quiet, compact design makes it a great fit for professional environments such as offices, data centers, and server rooms.
+Voyager is BasslineMnk's professional-grade KVM over IP device. Its quiet, compact design makes it a great fit for professional environments such as offices, data centers, and server rooms.
 
-### [TinyPilot Hobbyist Kit](https://tinypilotkvm.com/product/tinypilot-hobbyist-kit)
+### [BasslineMnk Hobbyist Kit](https://basslinemnkkvm.com/product/basslinemnk-hobbyist-kit)
 
-[![Photo of TinyPilot Voyager](https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/readme-assets/hobbyist-kit.jpg)](https://tinypilotkvm.com/product/tinypilot-hobbyist-kit)
+[![Photo of BasslineMnk Voyager](https://raw.githubusercontent.com/bassline-mnk/basslinemnk/master/readme-assets/hobbyist-kit.jpg)](https://basslinemnkkvm.com/product/basslinemnk-hobbyist-kit)
 
-The TinyPilot Hobbyist Kit is a great fit for home users who want a low-cost, DIY KVM over IP device.
+The BasslineMnk Hobbyist Kit is a great fit for home users who want a low-cost, DIY KVM over IP device.
 
 ## Build your own
 
-All-in-one kits are available from [tinypilotkvm.com](https://tinypilotkvm.com/order).
+All-in-one kits are available from [basslinemnkkvm.com](https://basslinemnkkvm.com/order).
 
 * [Raspberry Pi 4](https://smile.amazon.com/dp/B07TD42S27) (all variants work)
 * [HDMI to USB dongle](https://smile.amazon.com/dp/B08CXWPYQ8/)
@@ -52,13 +52,13 @@ All-in-one kits are available from [tinypilotkvm.com](https://tinypilotkvm.com/o
 * [microSD card](https://smile.amazon.com/dp/B073K14CVB/) (Class 10, 8 GB or larger)
 * [HDMI to HDMI cable](https://smile.amazon.com/dp/B014I8SSD0/)
   * Or \[other\] to HDMI, depending on how your target machine displays output.
-* (Optional) [A USB-C OTG split connector](https://tinypilotkvm.com/product/tinypilot-power-connector): Supports continuous power when the target computer turns off.
+* (Optional) [A USB-C OTG split connector](https://basslinemnkkvm.com/product/basslinemnk-power-connector): Supports continuous power when the target computer turns off.
   * Requires two additional [USB-A to microUSB cables](https://smile.amazon.com/dp/B01JPDTZXK/) and a [3 Amp power adapter](https://smile.amazon.com/dp/B0728HB18G).
   * If you're using this split connector, choose a USB-C to USB-A cable that's [12" or shorter](https://smile.amazon.com/dp/B012V56D2A/) to minimize voltage drop along the cable.
 * (Optional) [VGA to HDMI Adapter](https://smile.amazon.com/dp/B07121Y1Z3/)
-  * If your target computer has VGA output, the above adapter is [confirmed to work](https://github.com/tiny-pilot/tinypilot/issues/76#issuecomment-664736402) with TinyPilot.
+  * If your target computer has VGA output, the above adapter is [confirmed to work](https://github.com/bassline-mnk/basslinemnk/issues/76#issuecomment-664736402) with BasslineMnk.
 
-See ["TinyPilot: Build a KVM Over IP for Under $100"](https://mtlynch.io/tinypilot/#how-to-build-your-own-tinypilot) for a more detailed tutorial on how to assemble these parts to create a TinyPilot.
+See ["BasslineMnk: Build a KVM Over IP for Under $100"](https://adrian-griffin.io/basslinemnk/#how-to-build-your-own-basslinemnk) for a more detailed tutorial on how to assemble these parts to create a BasslineMnk.
 
 ## Pre-requisites
 
@@ -67,25 +67,25 @@ See ["TinyPilot: Build a KVM Over IP for Under $100"](https://mtlynch.io/tinypil
 
 ## Simple installation
 
-You can install TinyPilot on a compatible Raspberry Pi in just two commands.
+You can install BasslineMnk on a compatible Raspberry Pi in just two commands.
 
 ```bash
 curl \
   --silent \
   --show-error \
-  https://raw.githubusercontent.com/tiny-pilot/tinypilot/master/quick-install | \
+  https://raw.githubusercontent.com/bassline-mnk/basslinemnk/master/quick-install | \
     bash - && \
   sudo reboot
 ```
 
 The installation process:
 
-* Creates a service account for TinyPilot with limited priviliges.
-* Installs TinyPilot as a systemd service so it runs automatically on every boot.
-* Installs TinyPilot's dependencies.
-* Installs TinyPilot to the `/opt/tinypilot` directory.
+* Creates a service account for BasslineMnk with limited priviliges.
+* Installs BasslineMnk as a systemd service so it runs automatically on every boot.
+* Installs BasslineMnk's dependencies.
+* Installs BasslineMnk to the `/opt/basslinemnk` directory.
 
-When your Pi reboots, you should be able to access TinyPilot by visiting your Pi hostname in the browser. For example, if your device is named `raspberrypi`:
+When your Pi reboots, you should be able to access BasslineMnk by visiting your Pi hostname in the browser. For example, if your device is named `raspberrypi`:
 
 * [http://raspberrypi/](http://raspberrypi/)
 
@@ -95,36 +95,36 @@ See the [CONTRIBUTING](CONTRIBUTING.md) file.
 
 ## Other installation options
 
-* [Advanced installation options](https://github.com/tiny-pilot/tinypilot/wiki/Installation-Options#advanced-installation)
-* [Remote installation via Ansible](https://github.com/tiny-pilot/tinypilot/wiki/Installation-Options#remote-installation)
+* [Advanced installation options](https://github.com/bassline-mnk/basslinemnk/wiki/Installation-Options#advanced-installation)
+* [Remote installation via Ansible](https://github.com/bassline-mnk/basslinemnk/wiki/Installation-Options#remote-installation)
 
 ## Updates
 
-To update to the latest version of TinyPilot, run the update script:
+To update to the latest version of BasslineMnk, run the update script:
 
 ```bash
-/opt/tinypilot/scripts/upgrade && sudo reboot
+/opt/basslinemnk/scripts/upgrade && sudo reboot
 ```
 
 ## Diagnostics
 
-If you're having trouble with TinyPilot, you can retrive logs from the web dashboard by clicking "Logs" in the bottom of the main dashboard.
+If you're having trouble with BasslineMnk, you can retrive logs from the web dashboard by clicking "Logs" in the bottom of the main dashboard.
 
 If you can't access the web dashboard, you can retrieve the logs by SSHing into the device and running the following command:
 
 ```bash
-/opt/tinypilot/dev-scripts/dump-logs
+/opt/basslinemnk/dev-scripts/dump-logs
 ```
 
-This log is useful if you [file a bug report](https://github.com/tiny-pilot/tinypilot/issues/new?assignees=&labels=&template=bug_report.md&title=).
+This log is useful if you [file a bug report](https://github.com/bassline-mnk/basslinemnk/issues/new?assignees=&labels=&template=bug_report.md&title=).
 
-You can read more details about the logs [in the wiki](https://github.com/tiny-pilot/tinypilot/wiki/Troubleshooting-and-Diagnostics).
+You can read more details about the logs [in the wiki](https://github.com/bassline-mnk/basslinemnk/wiki/Troubleshooting-and-Diagnostics).
 
 ## Security considerations
 
-TinyPilot does not support authentication or transport-level encryption. You should only use TinyPilot on networks that you trust. Anyone who accesses the TinyPilot URL can shutdown or restart your Pi and type arbitrary commands into the device to which your Pi is connected.
+BasslineMnk does not support authentication or transport-level encryption. You should only use BasslineMnk on networks that you trust. Anyone who accesses the BasslineMnk URL can shutdown or restart your Pi and type arbitrary commands into the device to which your Pi is connected.
 
-To use TinyPilot on untrusted networks, you can upgrade to [TinyPilot Pro](https://tinypilotkvm.com/product/tinypilot-pro), which adds password-based authentication and TLS for end-to-end encryption.
+To use BasslineMnk on untrusted networks, you can upgrade to [BasslineMnk Pro](https://basslinemnkkvm.com/product/basslinemnk-pro), which adds password-based authentication and TLS for end-to-end encryption.
 
 As a free alternative, you can adjust your Nginx configuration (included by default with the installation) to require [HTTP Basic Authentication](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) and add a self-signed TLS certificate.
 
@@ -132,16 +132,16 @@ As a free alternative, you can adjust your Nginx configuration (included by defa
 
 If you're interested in seeing what's happening with the project at a granular level, weekly updates appear every Friday on What Got Done:
 
-* [What Got Done: TinyPilot](https://whatgotdone.com/michael/project/tinypilot)
+* [What Got Done: BasslineMnk](https://whatgotdone.com/michael/project/basslinemnk)
 
 ## See also
 
-* [TinyPilot Wiki](https://github.com/tiny-pilot/tinypilot/wiki): Guides for tasks related to TinyPilot.
-* [TinyPilot Ansible Role](https://github.com/tiny-pilot/ansible-role-tinypilot): Use [Ansible](https://docs.ansible.com/ansible/latest/index.html) to install TinyPilot and all dependencies as a systemd service.
+* [BasslineMnk Wiki](https://github.com/bassline-mnk/basslinemnk/wiki): Guides for tasks related to BasslineMnk.
+* [BasslineMnk Ansible Role](https://github.com/bassline-mnk/ansible-role-basslinemnk): Use [Ansible](https://docs.ansible.com/ansible/latest/index.html) to install BasslineMnk and all dependencies as a systemd service.
 
 ## Acknowledgments
 
-TinyPilot would not be possible without the excellent and generous work from many open source projects, the most notable of which are listed below:
+BasslineMnk would not be possible without the excellent and generous work from many open source projects, the most notable of which are listed below:
 
 * [uStreamer](https://github.com/pikvm/ustreamer)
 * [Flask](https://github.com/pallets/flask) and [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/)
@@ -152,15 +152,15 @@ TinyPilot would not be possible without the excellent and generous work from man
 
 ## Mailing list
 
-For news about major TinyPilot releases and other updates about the project, sign up for the TinyPilot mailing list:
+For news about major BasslineMnk releases and other updates about the project, sign up for the BasslineMnk mailing list:
 
-* [TinyPilot Mailing List](https://tinypilotkvm.com/about)
+* [BasslineMnk Mailing List](https://basslinemnkkvm.com/about)
 
 ## Upgrade to Pro
 
-TinyPilot Pro includes additional features for professional users, including:
+BasslineMnk Pro includes additional features for professional users, including:
 
-* [Virtual drive mounting and booting](https://tinypilotkvm.com/blog/whats-new-in-1-5#boot-into-a-virtual-disk-drive)
+* [Virtual drive mounting and booting](https://basslinemnkkvm.com/blog/whats-new-in-1-5#boot-into-a-virtual-disk-drive)
 * Password-based authentication
 
-Support the project and upgrade to Pro at <https://tinypilotkvm.com/product/tinypilot-pro>.
+Support the project and upgrade to Pro at <https://basslinemnkkvm.com/product/basslinemnk-pro>.

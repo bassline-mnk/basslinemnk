@@ -1,4 +1,4 @@
-FROM mtlynch/debian10-ansible:2.9.13
+FROM adrian-griffin/debian10-ansible:2.9.13
 
 RUN apt-get update && \
     apt-get install \
